@@ -10,7 +10,7 @@ const router = createBrowserRouter(
     element: <Layout {...route} />,
   })),
   {
-    basename: BASE_HREF,
+    basename: `/${BASE_HREF}`,
   }
 );
 

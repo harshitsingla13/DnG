@@ -1,10 +1,12 @@
-import { FC, useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import Components from "../../common/RenderingComponent.js";
+import Header from "../header/Header.js";
+import Footer from "../footer/Footer.js";
+import Navbar from "../header/Navbar.js";
 
 export const Layout = (props) => {
   const {
-    hideAllLinks,
     showHeader = true,
     showFooter = false,
     pageToRender,
@@ -17,16 +19,17 @@ export const Layout = (props) => {
 
   return (
     <>
-      {/* {showHeader && (
-            <Header
-               isUserLoggedIn={false}
-               announcementBar={null}
-               appName="homepage"
-               onNavClickHandler={() => {
-                  //
-               }}
-            />
-         )} */}
+      {showHeader && (
+        <Header />
+        //   <Header
+        //     isUserLoggedIn={false}
+        //     announcementBar={null}
+        //     appName="homepage"
+        //     onNavClickHandler={() => {
+        //       //
+        //     }}
+        //   />
+      )}
 
       {/* shimmer skeleton loader */}
       {/* {isLoading && <Shimmer />} */}
@@ -35,13 +38,7 @@ export const Layout = (props) => {
       {Components(pageToRender)}
       {/* {component} */}
 
-      {/* {isNotLoadingAndisWeb && showFooter && (
-            <Footer
-               appName="homepage"
-               testID="family-footer"
-               hideAllLinks={hideAllLinks}
-            />
-         )} */}
+      {showFooter && <Footer appName="homepage" testID="family-footer" />}
     </>
   );
 };
