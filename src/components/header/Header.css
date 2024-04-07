@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  background-color: #e5e5e5ff;
+  background-color: #fffff2; /*#e5e5e5ff*/
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,7 +8,7 @@
   /* border-bottom: 3px solid #f48c06; */
   top: 0;
   z-index: 100;
-  background-image: url("../../Ammazza.png");
+  /* background-image: url("../../Ammazza.png"); */
   background-size: contain;
   min-height: 100px;
 }
@@ -79,7 +79,7 @@
   text-decoration: overline;
   font-weight: 700;
   color: #000;
-  background-color: #e5e5e5ff;
+  background-color: #fffff2;
 }
 
 .nav-items {
@@ -112,7 +112,7 @@
 .nav-items > ul > li {
   cursor: pointer;
   color: #000;
-  background-color: #e5e5e5ff;
+  background-color: #fffff2;
   font-weight: 700;
   border-radius: 4px;
 }
@@ -163,7 +163,7 @@
     text-align: start;
     width: 100%;
     transition: 0.7s ease-in-out;
-    background-color: #e5e5e5ff;
+    background-color: #fffff2;
     padding: 10px;
   }
 
@@ -176,7 +176,7 @@
   }
 }
 
-@media screen and (359px<=width<= 779px) {
+@media screen and (width<= 779px) {
   .header {
     min-height: 82px;
   }

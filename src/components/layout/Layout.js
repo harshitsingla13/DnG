@@ -35,7 +35,7 @@ export const Layout = (props) => {
       {/* {isLoading && <Shimmer />} */}
 
       {/* artist component */}
-      {Components(pageToRender)}
+      <div style={{ padding: "0px 18px" }}>{Components(pageToRender)}</div>
       {/* {component} */}
 
       {showFooter && <Footer appName="homepage" testID="family-footer" />}
